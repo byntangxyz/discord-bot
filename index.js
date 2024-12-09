@@ -12,7 +12,7 @@ const express = require("express");
 const dotenv = require("dotenv");
 
 dotenv.config();
-const token = process.env.TOKEN;
+const token = process.env.DISCORD_TOKEN;
 
 // Membuat app Express
 const app = express();
