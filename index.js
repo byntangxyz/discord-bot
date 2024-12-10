@@ -253,17 +253,17 @@ client.on(Events.MessageCreate, async (message) => {
           {
             label: "Minecraft",
             value: "mc",
-            emoji: "🧑‍🦱",
+            emoji: "⛏",
           },
           {
             label: "Free Fire",
             value: "ff",
-            emoji: "👩‍🦰",
+            emoji: "🏹",
           },
           {
             label: "Mobile Legend",
             value: "ml",
-            emoji: "👤",
+            emoji: "⚔",
           }
         )
     );
@@ -287,7 +287,9 @@ client.on(Events.InteractionCreate, async (interaction) => {
     } else if (selectedRole === "ff") {
       role = interaction.guild.roles.cache.find((r) => r.name === "Free Fire");
     } else if (selectedRole === "ml") {
-      role = interaction.guild.roles.cache.find((r) => r.name === "Mobile Legend");
+      role = interaction.guild.roles.cache.find(
+        (r) => r.name === "Mobile Legend"
+      );
     }
 
     if (role) {
