@@ -248,28 +248,28 @@ client.on(Events.MessageCreate, async (message) => {
     const row = new ActionRowBuilder().addComponents(
       new StringSelectMenuBuilder()
         .setCustomId("role_select")
-        .setPlaceholder("Pilih role kamu!")
+        .setPlaceholder("Pilih game kamu!")
         .addOptions(
           {
-            label: "He/Him",
-            value: "hehim",
+            label: "Minecraft",
+            value: "mc",
             emoji: "🧑‍🦱",
           },
           {
-            label: "She/Her",
-            value: "sheher",
+            label: "Free Fire",
+            value: "ff",
             emoji: "👩‍🦰",
           },
           {
-            label: "They/Them",
-            value: "theythem",
+            label: "Mobile Legend",
+            value: "ml",
             emoji: "👤",
           }
         )
     );
 
     await message.channel.send({
-      content: "Pilih role kamu dengan dropdown berikut:",
+      content: "Pilih role game kamu dengan dropdown berikut:",
       components: [row],
     });
   }
@@ -282,12 +282,12 @@ client.on(Events.InteractionCreate, async (interaction) => {
     const selectedRole = interaction.values[0];
     let role;
 
-    if (selectedRole === "hehim") {
-      role = interaction.guild.roles.cache.find((r) => r.name === "He/Him");
-    } else if (selectedRole === "sheher") {
-      role = interaction.guild.roles.cache.find((r) => r.name === "She/Her");
-    } else if (selectedRole === "theythem") {
-      role = interaction.guild.roles.cache.find((r) => r.name === "They/Them");
+    if (selectedRole === "mc") {
+      role = interaction.guild.roles.cache.find((r) => r.name === "Minecraft");
+    } else if (selectedRole === "ff") {
+      role = interaction.guild.roles.cache.find((r) => r.name === "Free Fire");
+    } else if (selectedRole === "ml") {
+      role = interaction.guild.roles.cache.find((r) => r.name === "Mobile Legend");
     }
 
     if (role) {
