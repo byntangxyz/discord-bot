@@ -75,6 +75,31 @@ client.on("messageCreate", (message) => {
 
     message.channel.send({ embeds: [embed] });
   }
+  if (message.content === `${prefix}mc`) {
+    const embed = new EmbedBuilder()
+      .setColor(0x0099ff)
+      .setTitle("Minecraft Bedrock Server")
+      .setAuthor({
+        name: "BxGusFundz",
+        iconURL: "https://bxlinks.vercel.app/logo.png",
+        url: "https://discord.js.org/",
+      })
+      .setDescription(
+        "pvn1.lyeenstore.xyz:19156"
+      )
+      .addFields(
+        { name: "Current Status", value: "🟢 ONLINE", inline: true },
+        { name: "Description", value: "Sever Telah Online!", inline: true }
+      )
+
+      .setTimestamp()
+      .setFooter({
+        text: `${client.user.tag}`,
+        iconURL: "https://bxlinks.vercel.app/logo.png",
+      });
+
+    message.channel.send({ embeds: [embed] });
+  }
   // Jangan balas pesan dari bot sendiri
   if (message.author.bot) return;
   const regex1 = /\bmakasi\b.*$/i;
