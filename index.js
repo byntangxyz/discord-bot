@@ -80,6 +80,9 @@ client.on("messageCreate", (message) => {
       .setColor(0x0099ff)
       .setTitle("Minecraft Bedrock Server")
       .setDescription("pvn1.lyeenstore.xyz:19156")
+      .setThumbnail(
+        "https://thumbs.dreamstime.com/b/minecraft-logo-online-game-dirt-block-illustrations-concept-design-isolated-186775550.jpg"
+      )
       .addFields(
         { name: "Current Status", value: "🟢 ONLINE", inline: true },
         { name: "Description", value: "Sever Telah Online!", inline: true }
