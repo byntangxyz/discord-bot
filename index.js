@@ -41,7 +41,7 @@ const prefix = "b!";
 client.once("ready", () => {
   console.log(`Bot ${client.user.tag} sudah online!`);
   client.user.setPresence({
-    activities: [{ name: "b!help", type: 2 }], // "type: 2" untuk Listening
+    activities: [{ name: "ARC v2", type: 1 }], // "type: 2" untuk Listening
     status: "idle",
   });
 });
