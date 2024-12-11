@@ -79,14 +79,7 @@ client.on("messageCreate", (message) => {
     const embed = new EmbedBuilder()
       .setColor(0x0099ff)
       .setTitle("Minecraft Bedrock Server")
-      .setAuthor({
-        name: "BxGusFundz",
-        iconURL: "https://bxlinks.vercel.app/logo.png",
-        url: "https://discord.js.org/",
-      })
-      .setDescription(
-        "pvn1.lyeenstore.xyz:19156"
-      )
+      .setDescription("pvn1.lyeenstore.xyz:19156")
       .addFields(
         { name: "Current Status", value: "🟢 ONLINE", inline: true },
         { name: "Description", value: "Sever Telah Online!", inline: true }
