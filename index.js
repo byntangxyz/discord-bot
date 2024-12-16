@@ -84,8 +84,8 @@ client.on("messageCreate", (message) => {
         "https://thumbs.dreamstime.com/b/minecraft-logo-online-game-dirt-block-illustrations-concept-design-isolated-186775550.jpg"
       )
       .addFields(
-        { name: "Current Status", value: "🔴 OFFLINE", inline: true },
-        { name: "Description", value: "Sever under maintenance & backup session, please wait for while...", inline: true }
+        { name: "Current Status", value: "🟢 ONLINE", inline: true },
+        { name: "Description", value: "Server is online", inline: true }
       )
 
       .setTimestamp()
