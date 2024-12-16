@@ -41,7 +41,7 @@ const prefix = "b!";
 client.once("ready", () => {
   console.log(`Bot ${client.user.tag} sudah online!`);
   client.user.setPresence({
-    activities: [{ name: "ARC v2", type: 1 }], // "type: 2" untuk Listening
+    activities: [{ name: "ARC v2", type: 3 }], // "type: 2" untuk Listening
     status: "idle",
   });
 });
@@ -84,8 +84,8 @@ client.on("messageCreate", (message) => {
         "https://thumbs.dreamstime.com/b/minecraft-logo-online-game-dirt-block-illustrations-concept-design-isolated-186775550.jpg"
       )
       .addFields(
-        { name: "Current Status", value: "🟢 ONLINE", inline: true },
-        { name: "Description", value: "Sever Telah Online!", inline: true }
+        { name: "Current Status", value: "🔴 OFFLINE", inline: true },
+        { name: "Description", value: "Sever under maintenance & backup session, please wait for while...", inline: true }
       )
 
       .setTimestamp()
